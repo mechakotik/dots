@@ -1,0 +1,3 @@
+type = process
+command = /usr/lib/polkit-kde-authentication-agent-1
+smooth-recovery = true
