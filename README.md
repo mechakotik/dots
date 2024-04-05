@@ -9,6 +9,7 @@ Install following packages:
 - swww
 - Patched [qt5ct](https://aur.archlinux.org/packages/qt5ct-kde) and [qt6ct](https://aur.archlinux.org/packages/qt6ct-kde) to work with KDE apps
 - nwg-look
+- Mononoki Nerd Font
 - Papirus icon theme and [Papirus Folders](https://github.com/PapirusDevelopmentTeam/papirus-folders)
 
 Optionally, install dinit to quickly start these on non-systemd distros. If not running dinit you should start all you need manually (for example, using `exec-once` in hyprland config).
