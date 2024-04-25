@@ -4,34 +4,36 @@
     "height": 24,
     "spacing": 5,
 
-    "modules-left": ["hyprland/workspaces", "group/usage"],
-    "modules-center": ["clock"],
-    "modules-right": ["wireplumber", "group/bat", "group/net", "tray"],
+    "modules-left": ["hyprland/window"],
+    "modules-center": ["hyprland/workspaces", "group/center", "tray"],
+    "modules-right": ["group/right", "group/usage", "group/net"],
 
     "group/usage": {
         "orientation": "horizontal",
         "modules": ["memory", "temperature"]
     },
 
-    "group/bat": {
+    "group/right": {
         "orientation": "horizontal",
-        "modules": ["battery", "backlight"]
+        "modules": ["wireplumber", "backlight"]
+    },
+
+    "group/center": {
+        "orientation": "horizontal",
+        "modules": ["clock", "battery", "hyprland/language"]
     },
 
     "group/net": {
         "orientation": "horizontal",
-        "modules": ["hyprland/language", "network", "bluetooth"]
+        "modules": ["network", "bluetooth"]
     },
 
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
         "format-icons": {
-            "1": "\uf489",
-            "2": "\udb80\ude39",
-            "3": "\udb82\ude1e",
-            "4": "\uf001",
-            "5": "\ue217",
+            "active": "\uf192",
+            "default": "\uf10c"
         },
         "icon-size": 50,
         "sort-by-number": true,
@@ -45,7 +47,27 @@
     },
 
     "clock": {
-        "format": "{:%d.%m.%Y | %H:%M}"
+        "format": "\uf43a  {:%H:%M}",
+        "tooltip-format": "{calendar}",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
     },
 
     "wireplumber": {
@@ -95,11 +117,21 @@
     },
 
     "hyprland/language": {
-        "format": "{short}"
+        "format": "\uf484  {short}"
     },
 
     "tray": {
         "icon-size": 16,
         "spacing": 16
+    },
+
+    "hyprland/window": {
+        "format": " {}",
+        "max-length": 50,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": " \uf484  $1",
+            "(.*) — Konsole": " > $1"
+        },
+        "separate-outputs": true
     }
 }

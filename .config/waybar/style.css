@@ -15,27 +15,28 @@
     background-color: @background;
 }
 
+#workspaces {
+    background-color: @background-alt;
+    border-radius: 5px;
+}
+
 #workspaces button {
-    padding-left: 1em;
-    padding-right: 1.3em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    margin-right: 0.3em;
 }
 
 #workspaces button.empty {
     color: @foreground-inactive;
 }
 
-#workspaces button.active {
-    background-color: @background-alt;
-    border-radius: 3px;
-}
-
-#wireplumber,
-#bat,
+#center,
+#right,
 #tray,
 #usage,
 #net {
     background-color: @background-alt;
-    border-radius: 3px;
+    border-radius: 5px;
     padding-left: 0.5em;
     padding-right: 0.5em;
     margin-left: 0.3em;
@@ -43,7 +44,8 @@
 
 #battery,
 #memory,
-#language,
-#network {
+#network,
+#clock,
+#wireplumber {
     margin-right: 0.8em;
 }
