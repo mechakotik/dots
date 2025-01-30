@@ -4,38 +4,18 @@
     "height": 24,
     "spacing": 5,
 
-    "modules-left": ["hyprland/window"],
-    "modules-center": ["hyprland/workspaces", "group/center", "tray"],
-    "modules-right": ["group/right", "group/usage", "group/net"],
-
-    "group/usage": {
-        "orientation": "horizontal",
-        "modules": ["memory", "temperature"]
-    },
-
-    "group/right": {
-        "orientation": "horizontal",
-        "modules": ["wireplumber", "backlight"]
-    },
-
-    "group/center": {
-        "orientation": "horizontal",
-        "modules": ["clock", "battery", "hyprland/language"]
-    },
-
-    "group/net": {
-        "orientation": "horizontal",
-        "modules": ["network", "bluetooth"]
-    },
+    "modules-left": ["hyprland/workspaces", "memory", "temperature"],
+    "modules-center": ["clock"],
+    "modules-right": ["wireplumber", "battery", "backlight", "hyprland/language", "network", "bluetooth", "tray"],
 
     "hyprland/workspaces": {
-        "format": "{icon}",
+        "format": "<span size='larger'>{icon}</span>",
         "on-click": "activate",
         "format-icons": {
-            "active": "\uf192",
-            "default": "\uf10c"
+            "active": "\uf444",
+            "default": "\uf4c3"
         },
-        "icon-size": 50,
+        "icon-size": 10,
         "sort-by-number": true,
         "persistent-workspaces": {
             "1": [],
@@ -47,27 +27,7 @@
     },
 
     "clock": {
-        "format": "\uf43a  {:%H:%M}",
-        "tooltip-format": "{calendar}",
-        "calendar": {
-                    "mode"          : "month",
-                    "mode-mon-col"  : 3,
-                    "on-scroll"     : 1,
-                    "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                              }
-                    },
-        "actions":  {
-                    "on-click-right": "mode",
-                    "on-click-forward": "tz_up",
-                    "on-click-backward": "tz_down",
-                    "on-scroll-up": "shift_up",
-                    "on-scroll-down": "shift_down"
-                    }
+        "format": "{:%d.%m.%Y | %H:%M}"
     },
 
     "wireplumber": {
@@ -93,14 +53,14 @@
     },
 
     "temperature": {
-        "format": " {temperatureC}°C"
+        "format": "  {temperatureC}°C"
     },
 
     "network": {
         "format": "",
-        "format-ethernet": "\udb83\udc9d ",
-        "format-wifi": "{icon} ",
-        "format-disconnected": "\udb83\udc9c ",
+        "format-ethernet": "\udb83\udc9d",
+        "format-wifi": "{icon}",
+        "format-disconnected": "\udb83\udc9c",
         "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname}",
@@ -117,21 +77,11 @@
     },
 
     "hyprland/language": {
-        "format": "\uf484  {short}"
+        "format": "{short}"
     },
 
     "tray": {
         "icon-size": 16,
         "spacing": 16
-    },
-
-    "hyprland/window": {
-        "format": " {}",
-        "max-length": 50,
-        "rewrite": {
-            "(.*) — Mozilla Firefox": " \uf484  $1",
-            "(.*) — Konsole": " > $1"
-        },
-        "separate-outputs": true
     }
 }

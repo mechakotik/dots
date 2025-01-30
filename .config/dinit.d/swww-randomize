@@ -1,4 +1,0 @@
-type = process
-command = /home/mecha/swww-randomize.sh /home/mecha/wallpapers
-depends-on = swww
-smooth-recovery = true

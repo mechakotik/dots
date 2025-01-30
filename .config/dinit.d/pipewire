@@ -1,4 +1,0 @@
-type            = process
-command         = /usr/bin/pipewire
-smooth-recovery = true
-socket-listen   = $XDG_RUNTIME_DIR/pipewire-0

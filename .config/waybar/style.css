@@ -1,10 +1,9 @@
-@define-color foreground #eff0f1;
-@define-color foreground-inactive #7f8c8d;
-@define-color background #232629;
-@define-color background-alt #31363b;
+@define-color foreground #eeeeee;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #000000;
 
 * {
-    font-family: Mononoki Nerd Font;
+    font-family: JetBrainsMono Nerd Font;
     font-size: 17px;
     padding: 0;
     margin: 0;
@@ -15,37 +14,26 @@
     background-color: @background;
 }
 
-#workspaces {
-    background-color: @background-alt;
-    border-radius: 5px;
-}
-
 #workspaces button {
-    padding-left: 0.6em;
-    padding-right: 0.6em;
-    margin-right: 0.3em;
+    color: @foreground;
+    padding-left: 0.7em;
 }
 
 #workspaces button.empty {
     color: @foreground-inactive;
 }
 
-#center,
-#right,
-#tray,
-#usage,
-#net {
-    background-color: @background-alt;
-    border-radius: 5px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-left: 0.3em;
+#memory,
+#temperature {
+    padding-left: 1em
 }
 
+#wireplumber,
 #battery,
-#memory,
+#backlight,
+#language,
 #network,
-#clock,
-#wireplumber {
-    margin-right: 0.8em;
+#bluetooth,
+#tray {
+    padding-right: 1em 
 }
