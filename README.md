@@ -1,26 +1,14 @@
 ## Installation
 
-Install following packages:
+Dependencies:
 
-- Hyprland
+- Hyprland, Hyprlock, Hyrpidle, Hyprpaper
 - Waybar
-- Pipewire, Wireplumber
-- polkit-kde-agent
-- swww
-- Patched [qt5ct](https://aur.archlinux.org/packages/qt5ct-kde) and [qt6ct](https://aur.archlinux.org/packages/qt6ct-kde) to work with KDE apps
-- nwg-look
-- Mononoki Nerd Font
-- Papirus icon theme and [Papirus Folders](https://github.com/PapirusDevelopmentTeam/papirus-folders)
+- JetBrainsMono Nerd Font
 
-Optionally, install dinit to quickly start these on non-systemd distros. If not running dinit you should start all you need manually (for example, using `exec-once` in hyprland config).
-
-Copy contents of the repository to your home directory.
-
-Set Breeze Theme, Breeze Dark Teal color scheme and Papirus Dark icon theme in qt5ct, qt6ct and nwg-look. Set Breeze cursor in nwg-look. Then run this command to change Papirus folder color:
-```
-sudo papirus-folders -C teal --theme Papirus-Dark
-```
+This repository alone won't make fully functional setup (launcher and notification daemon are missing), so it's recommended to look through and copy config parts you like rather than fully copying config.
 
 ## Screenshot
 
-![screenshot](https://github.com/mechakotik/dots/assets/43793572/74faf007-e340-432e-8502-41e6d0b80bbb)
+![image](https://github.com/user-attachments/assets/05b7f64c-eff2-4476-b4d7-98e54f3151ba)
+
