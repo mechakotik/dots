@@ -4,9 +4,9 @@
     "height": 24,
     "spacing": 5,
 
-    "modules-left": ["hyprland/workspaces", "memory", "temperature"],
+    "modules-left": ["hyprland/workspaces", "custom/platform-profile", "temperature"],
     "modules-center": ["clock"],
-    "modules-right": ["wireplumber", "battery", "backlight", "hyprland/language", "network", "bluetooth", "tray"],
+    "modules-right": ["wireplumber", "battery", "hyprland/language", "idle_inhibitor", "network", "bluetooth", "tray"],
 
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
@@ -43,17 +43,13 @@
         "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
     },
 
-    "backlight": {
-        "format": "\udb80\udcdf  {percent}%"
-    },
-
     "memory": {
         "interval": 30,
         "format": "\uf4bc  {used:0.1f}G"
     },
 
     "temperature": {
-        "format": "  {temperatureC}°C"
+        "format": "{temperatureC}°C"
     },
 
     "network": {
@@ -83,5 +79,26 @@
     "tray": {
         "icon-size": 16,
         "spacing": 16
+    },
+
+    "custom/platform-profile": {
+	"format": "{icon} ",
+	"exec": "~/.config/waybar/platform_profile.sh",
+	"return-type": "json",
+	"restart-interval": 1,
+	"format-icons": {
+	    "quiet": "\udb80\udf2a",
+	    "balanced": "\udb80\ude10",
+	    "performance": "\uf427",
+            "default": "?"
+	},
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "\udb80\udd76",
+            "deactivated": "\udb83\udfaa"
+        }
     }
 }

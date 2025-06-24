@@ -24,13 +24,13 @@
 }
 
 #memory,
-#temperature {
+#custom-platform-profile {
     padding-left: 1em
 }
 
 #wireplumber,
 #battery,
-#backlight,
+#idle_inhibitor,
 #language,
 #network,
 #bluetooth,
